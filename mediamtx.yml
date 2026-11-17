@@ -1,0 +1,11 @@
+
+# MediaMTX configuration
+# Authentication credentials remain in Railway.
+
+authMethod: internal
+
+api: yes
+apiAddress: :9997
+
+hls: yes
+hlsAddress: :8888
