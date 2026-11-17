@@ -1,8 +1,32 @@
 
 # MediaMTX configuration
-# Authentication credentials remain in Railway.
 
 authMethod: internal
+
+authInternalUsers:
+  - user: any
+    pass:
+    ips: []
+    permissions:
+      - action: publish
+      - action: read
+      - action: playback
+
+  - user: any
+    pass:
+    ips:
+      - 127.0.0.1
+      - ::1
+    permissions:
+      - action: api
+      - action: metrics
+      - action: pprof
+
+  - user: iptv-converter
+    pass: REPLACE_FROM_RAILWAY
+    ips: []
+    permissions:
+      - action: api
 
 api: yes
 apiAddress: :9997
